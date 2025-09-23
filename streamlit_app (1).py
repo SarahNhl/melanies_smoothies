@@ -15,12 +15,9 @@ st.write(
 name_on_order = st.text_input("Name on Smoothie :")
 st.write("The name on your Smoothie will be :", name_on_order)
 
-isOrderFilled = 'True'
-st.write("The order is filled :"+ isOrderFilled)
-
 isFilled = st.selectbox(
     "Is the order filled ?",
-    ("True", "False"),
+    (True, False),
 )
 
 cnx = st.connection("snowflake")
@@ -54,10 +51,8 @@ if ingredients_list:
         sf_df= st.dataframe(data= smoothiefroot_response.json(), use_container_width= True)
     
     #st.write(ingredients_string)
-
-#isOrderFilled= st.text_input("True")
   
-    my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER,test)
+    my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER,ORDER_FILLES)
         values ('""" + ingredients_string + """','""" + name_on_order + """','""" + isFilled + """')"""
 
     st.write(my_insert_stmt)
