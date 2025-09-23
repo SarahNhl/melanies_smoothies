@@ -12,6 +12,9 @@ st.write(
   """
 )
 
+isOrderFilled = st.text_input("True")
+st.write("Is the order filled : ", isOrderFilled)
+
 name_on_order = st.text_input("Name on Smoothie :")
 st.write("The name on your Smoothie will be :", name_on_order)
 
