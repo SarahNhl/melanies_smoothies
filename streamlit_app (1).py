@@ -17,7 +17,7 @@ st.write("The name on your Smoothie will be :", name_on_order)
 
 isFilled = st.selectbox(
     "Is the order filled ?",
-    (True, False),
+    ('True', 'False'),
 )
 
 cnx = st.connection("snowflake")
