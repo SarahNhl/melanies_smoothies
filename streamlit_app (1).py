@@ -15,7 +15,7 @@ st.write(
 name_on_order = st.text_input("Name on Smoothie :")
 st.write("The name on your Smoothie will be :", name_on_order)
 
-isOrderFilled = True
+isOrderFilled = 'True'
 st.write("The order is filled :"+ isOrderFilled)
 
 cnx = st.connection("snowflake")
