@@ -47,7 +47,7 @@ if ingredients_list:
     
     #st.write(ingredients_string)
 
-IsFilled= 'True'
+IsFilled= st.text_input("True")
   
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER,ORDER_FILLED)
         values ('""" + ingredients_string + """','""" + name_on_order + """ + IsFilled +"""')"""
