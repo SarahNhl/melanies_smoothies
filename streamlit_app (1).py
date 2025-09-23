@@ -47,10 +47,10 @@ if ingredients_list:
     
     #st.write(ingredients_string)
 
-Filled= 'True'
+IsFilled= 'True'
   
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER,ORDER_FILLED)
-            values ('""" + ingredients_string + """','""" + name_on_order + """ + Filled +"""')"""
+            values ('""" + ingredients_string + """','""" + name_on_order + """ + IsFilled +"""')"""
 
     st.write(my_insert_stmt)
     #st.stop()
